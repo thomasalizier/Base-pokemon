@@ -1,0 +1,50 @@
+footer {
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+
+    padding: 10px 30px;
+    text-transform: uppercase;
+}
+
+ul.menu-familles {
+    list-style-type: none;
+    padding-left: 0;
+
+}
+ul.menu-familles li {
+    margin-bottom: 10px;
+
+}
+header {
+    margin-bottom: 20px;
+
+}
+.bloc-pokemons > div {
+    margin-bottom: 20px;
+    background-color: lightslategrey;
+}
+.bloc-pokemons > div:last-child {
+    margin-bottom: 0;
+    background-color: lightslategray;
+}
+
+body{background-color: whitesmoke;}
+
+.Feu {color: orange;}
+.Acier{color:lightslategrey;}
+.Combat{color: saddlebrown;}
+.Dragon{color: darkslateblue;}
+.Eau{color: dodgerblue;}
+.Electrique{color: yellow;}
+.Glace{color: aqua;}
+.Insecte{color: darkolivegreen;}
+.Normal{color: gray;}
+.Plante{color: green;}
+.Poison{color: rebeccapurple;}
+.Psy{color: deeppink;}
+.Sol{color: darkorange;}
+.Roche{color: coral;}
+.Spectre{color: mediumpurple;}
+.Tenebre{color: black;}
+.Vol{color: lightskyblue;}
