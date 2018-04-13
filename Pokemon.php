@@ -40,7 +40,7 @@
                         <a class="nav-link" href="../index.php">Accueil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pokemon</a>
+                        <a class="nav-link" href="http://192.168.95.100/Pokemon.php">Pokemon</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
