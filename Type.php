@@ -37,16 +37,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../index.php">Accueil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Pokémon</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -61,8 +58,8 @@
             <!-- Boutton -->
             <ul class="menu-familles">
                 <?php
-                while($donneesType=$Type->fetch()){?>
-                    <li class="<?php echo $donnees{'type'}?>">
+                while($donneesType=$DiffType->fetch()){?>
+                    <li class="<?php echo $donneesType{'type'}?>">
                         <button class="nav-item">
                             <a href="Type.php?type=<?php echo $donneesType['type1']; ?>">
                                 <div class="<?php echo $donneesType['type1']; ?>"><?php echo $donneesType['type1']; ?></div>
@@ -78,10 +75,12 @@
 
             <!-- fiche pokemon debut -->
             <?php
-            while($donnees=$response->fetch()){?>
+            while($donnees=$Type->fetch()){?>
                 <div class="row">
                     <div class="col-3">
+                        <ul class="taille-img">
                         <img class="img-fluid" src="<?php echo $donnees{'img'} ?>">
+                        </ul>
                     </div>
                     <div class="col-9">
                         <h4><?php echo $donnees{'id'}.'-'.$donnees{'nom'}?></h4>

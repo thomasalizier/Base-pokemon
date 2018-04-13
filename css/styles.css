@@ -33,6 +33,16 @@ header {
     margin-bottom: 0;
     background-color: lightslategray;
 }
+.taille-img img{
+    witdh: 150px;
+    height: 150px;
+}
+
+ul.accueil-img{
+    max-height: 50%;
+    max-width: 75px;
+    width: auto;
+}
 
 body{background-color: whitesmoke;}
 
