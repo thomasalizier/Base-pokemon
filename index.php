@@ -54,14 +54,47 @@
         </nav>
     </header>
     <div class="row">
-        <div class="col-12">
-             <ul class="accueil-img">
-             <img src="https://i.ytimg.com/vi/3H3Q1QTQoow/maxresdefault.jpg">
-             </ul>
-    </div>
-</div>
-</div>
+        <div class="col-3">
+            <!-- Boutton -->
+            <ul class="menu-familles">
+                <?php
+                while($donneesType=$DiffType->fetch()){?>
+                    <li class="<?php echo $donneesType{'type1'}?>">
+                        <button class="nav-item">
+                            <a href="Type.php?type=<?php echo $donneesType{'type1'}?>">
+                                <div class="<?php echo $donneesType{'type1'}?>"><?php echo $donneesType{'type1'}?></div>
+                            </a>
+                        </button>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+        <!-- boutton -->
+        <div class="col-9 bloc-pokemons">
 
+
+            <!-- fiche pokemon debut -->
+            <?php
+            while($donnees=$response->fetch()){?>
+                <div class="row">
+                    <div class="col-3">
+                        <ul class="taille-img">
+                        <img class="img-fluid" src="<?php echo $donnees{'img'} ?>">
+                        </ul>
+                    </div>
+                    <div class="col-9">
+                        <h4><?php echo $donnees{'id'}.'-'.$donnees{'nom'}?></h4>
+                        <p class="<?php echo $donnees{'type1'} ?>"> <?php echo $donnees{'type1'} ?> </p>
+                        <p class="<?php echo $donnees{'type2'} ?>"> <?php echo $donnees{'type2'} ?> </p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid animi atque dolorem eius eligendi exercitationem explicabo fuga, fugit iure laudantium odio, quaerat recusandae rem vero voluptas voluptate voluptates?</p>
+                    </div>
+                </div>
+            <?php } ?>
+
+            <!-- fiche pokemon fin -->
+
+        </div>
+    </div>
     <footer>
         Site Internet sur les pokemons, "LE POKEDEX" , créé par Alizier Thomas Etudiant en Première Année de BTS SIO !!
     </footer>
