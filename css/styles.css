@@ -13,13 +13,17 @@ ul.menu-familles {
 
 }
 ul.menu-familles li {
-    margin-bottom: 10px;
 
+}
+ul.menu-familles li button {
+    width: 100%;
+
+}
+ul.menu-familles li button a {
+    text-decoration: none;
 }
 header {
     margin-bottom: 20px;
-    color:red;
-
 }
 .bloc-pokemons > div {
     margin-bottom: 20px;

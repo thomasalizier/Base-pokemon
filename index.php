@@ -58,13 +58,13 @@
             <ul class="menu-familles">
                 <?php
                 while($donnees=$DiffType->fetch()){?>
-                    <div class="<?php echo $donnees{'type1'}?>">
+                    <li class="<?php echo $donnees{'type1'}?>">
                         <button class="nav-item">
                             <a href="PageType/<?php echo $donnees{'type1'}?>.php">
                                 <div class="<?php echo $donnees{'type1'}?>"><?php echo $donnees{'type1'}?></div>
                             </a>
                         </button>
-                    </div>
+                    </li>
                 <?php } ?>
             </ul>
         </div>

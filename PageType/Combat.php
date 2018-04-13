@@ -67,8 +67,6 @@
                     </div>
                 <?php } ?>
             </ul>
-            <!-- boutton -->
-        </div>
     </div>
         <div class="col-9 bloc-pokemons">
 

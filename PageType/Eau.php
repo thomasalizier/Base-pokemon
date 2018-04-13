@@ -69,7 +69,6 @@
             </ul>
         </div>
         <!-- boutton -->
-    </div>
         <div class="col-9 bloc-pokemons">
 
             <!-- fiche pokemon debut -->
