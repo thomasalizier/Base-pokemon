@@ -49,6 +49,10 @@
                         <a class="nav-link disabled" href="#">Disabled</a>
                     </li>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                </form>
             </div>
         </nav>
     </header>
@@ -60,7 +64,7 @@
                 while($donnees=$DiffType->fetch()){?>
                     <li class="<?php echo $donnees{'type1'}?>">
                         <button class="nav-item">
-                            <a href="PageType/<?php echo $donnees{'type1'}?>.php">
+                            <a href="Type.php?type=<?php echo $donnees{'type1'}?>">
                                 <div class="<?php echo $donnees{'type1'}?>"><?php echo $donnees{'type1'}?></div>
                             </a>
                         </button>

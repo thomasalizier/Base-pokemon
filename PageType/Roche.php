@@ -29,7 +29,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="//via.placeholder.com/45x45" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/269px-International_Pok%C3%A9mon_logo.svg.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,13 +58,13 @@
             <ul class="menu-familles">
                 <?php
                 while($donnees=$DiffType->fetch()){?>
-                    <div class="<?php echo $donnees{'type1'}?>">
+                    <li class="<?php echo $donnees{'type1'}?>">
                         <button class="nav-item">
                             <a href="PageType/<?php echo $donnees{'type1'}?>.php">
                                 <div class="<?php echo $donnees{'type1'}?>"><?php echo $donnees{'type1'}?></div>
                             </a>
                         </button>
-                    </div>
+                    </li>
                 <?php } ?>
             </ul>
         </div>

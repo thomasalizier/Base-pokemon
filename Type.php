@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <?php
 
     try {
@@ -18,9 +18,9 @@
     } catch (PDOException $exception){
         echo "Erreur : " . $exception -> getMessage();
     }
-    $response=$db->query("SELECT * FROM pokemon WHERE type1='Eau' or type2='Eau';");
-    $DiffType=$db->query("SELECT distinct type1 FROM pokemon ;");
-
+    $response=$db->query("SELECT * FROM pokemon;");
+    $DiffType=$db->query("SELECT distinct type1 FROM pokemon;");
+    $Type=$db->query("SELECT * FROM pokemon WHERE type1='".$_GET['type']."' or type2='".$_GET['type']."' ;");
 
     ?>
 </head>
@@ -49,6 +49,10 @@
                         <a class="nav-link disabled" href="#">Disabled</a>
                     </li>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                </form>
             </div>
         </nav>
     </header>
@@ -57,11 +61,11 @@
             <!-- Boutton -->
             <ul class="menu-familles">
                 <?php
-                while($donnees=$DiffType->fetch()){?>
-                    <li class="<?php echo $donnees{'type1'}?>">
+                while($donneesType=$Type->fetch()){?>
+                    <li class="<?php echo $donnees{'type'}?>">
                         <button class="nav-item">
-                            <a href="PageType/<?php echo $donnees{'type1'}?>.php">
-                                <div class="<?php echo $donnees{'type1'}?>"><?php echo $donnees{'type1'}?></div>
+                            <a href="Type.php?type=<?php echo $donneesType['type1']; ?>">
+                                <div class="<?php echo $donneesType['type1']; ?>"><?php echo $donneesType['type1']; ?></div>
                             </a>
                         </button>
                     </li>
@@ -70,6 +74,7 @@
         </div>
         <!-- boutton -->
         <div class="col-9 bloc-pokemons">
+
 
             <!-- fiche pokemon debut -->
             <?php
