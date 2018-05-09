@@ -37,59 +37,30 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../index.php">Accueil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="/Pokemon.php">Pokemon</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="/Contact.php">Contact</a>
                     </li>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <div>
+
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                    </div>
+                </form>
             </div>
         </nav>
     </header>
     <div class="row">
-        <div class="col-3">
-            <!-- Boutton -->
-            <ul class="menu-familles">
-                <?php
-                while($donnees=$DiffType->fetch()){?>
-                    <div class="<?php echo $donnees{'type1'}?>">
-                        <button class="nav-item">
-                            <a href="PageType/<?php echo $donnees{'type1'}?>.php">
-                                <div class="<?php echo $donnees{'type1'}?>"><?php echo $donnees{'type1'}?></div>
-                            </a>
-                        </button>
-                    </div>
-                <?php } ?>
+        <div class="col-6">
+            <ul class="accueil-img">
+                <img src="http://www.startgame.fr/modules/psblog/uploads/1456826098.jpg">
             </ul>
-        </div>
-        <!-- boutton -->
-        <div class="col-9 bloc-pokemons">
-
-
-            <!-- fiche pokemon debut -->
-            <?php
-            while($donnees=$response->fetch()){?>
-                <div class="row">
-                    <div class="col-3">
-                        <img class="img-fluid" src="<?php echo $donnees{'img'} ?>">
-                    </div>
-                    <div class="col-9">
-                        <h4><?php echo $donnees{'id'}.'-'.$donnees{'nom'}?></h4>
-                        <p class="<?php echo $donnees{'type1'} ?>"> <?php echo $donnees{'type1'} ?> </p>
-                        <p class="<?php echo $donnees{'type2'} ?>"> <?php echo $donnees{'type2'} ?> </p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid animi atque dolorem eius eligendi exercitationem explicabo fuga, fugit iure laudantium odio, quaerat recusandae rem vero voluptas voluptate voluptates?</p>
-                    </div>
-                </div>
-            <?php } ?>
-
-            <!-- fiche pokemon fin -->
-
         </div>
     </div>
     <footer>
